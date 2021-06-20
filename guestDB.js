@@ -8,9 +8,9 @@ const add = () => {
 };
 
 //View  ------ arrow function as  short
-const add = () => 'View';
+const view = () => 'View';
 
 module.exports = {
-    add:add,
-    view:view
+    add,
+    view
 };
