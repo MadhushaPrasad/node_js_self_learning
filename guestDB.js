@@ -1,16 +1,13 @@
-//save data to file
+const chalk = require('chalk');
 
-// const name = 'Madhusha Prasad';
-
-//create  ------ arrow function
 const add = () => {
-  return 'Adding';
+  console.log(chalk.green('Adding'));
 };
 
 //View  ------ arrow function as  short
-const view = () => 'View';
+const view = () => console.log(chalk.blue('View'));
 
 module.exports = {
-    add,
-    view
+  add,
+  view,
 };
