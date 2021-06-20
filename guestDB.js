@@ -5,7 +5,7 @@ const add = () => {
 };
 
 //View  ------ arrow function as  short
-const view = () => console.log(chalk.blue('View'));
+const view = () => console.log(chalk.green('View'));
 
 module.exports = {
   add,
