@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/MadhushaPrasad/node_js_self_learning/issues"
   },
-  "homepage": "https://github.com/MadhushaPrasad/node_js_self_learning#readme"
+  "homepage": "https://github.com/MadhushaPrasad/node_js_self_learning#readme",
+  "dependencies": {
+    "chalk": "^4.1.1"
+  }
 }
