@@ -10,4 +10,7 @@ const add = () => {
 //View  ------ arrow function as  short
 const add = () => 'View';
 
-module.exports = name;
+module.exports = {
+    add:add,
+    view:view
+};
