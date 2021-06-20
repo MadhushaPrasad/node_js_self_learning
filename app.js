@@ -1,3 +1,5 @@
+const db = require('./guestDB');
 //console input
+console.log('Hello App.js');
 
-//data -save to file
+console.log(db);
