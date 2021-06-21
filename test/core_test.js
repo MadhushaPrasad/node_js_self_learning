@@ -15,7 +15,7 @@ const fs = require('fs');
 //save data to json file
 
 const guest = [];
-
+/*
 guest.push({
     name: "Name",
     address: "add01"
@@ -23,4 +23,9 @@ guest.push({
 
 const dataJson = JSON.stringify(guest);
 
-fs.writeFileSync("guest_data.json", dataJson);
+fs.writeFileSync("guest_data.json", dataJson);*/
+
+
+//read data from json file
+const readFile = fs.readFileSync("guest_data.json");
+console.log(readFile.toString());//as string data
