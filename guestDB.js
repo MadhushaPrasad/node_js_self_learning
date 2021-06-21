@@ -6,7 +6,14 @@ const data_file = "data.json";//global variable
 //add new guest to json file
 const addGuest = (dataObject) => {
     const guest = loadGuest();
+    const lenght = guest.length;
+    let id = 1;
+    if (lenght > 0) {
+        id = guest[lenght - 1].guest_ID + 1;
+    }
+
     guest.push({
+        guest_ID: id,
         guest_name: dataObject.name,
         guest_address: dataObject.address,
     });
