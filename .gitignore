@@ -28,3 +28,9 @@ speed-measure-plugin.json
 !.vscode/extensions.json
 .history/*
 .vscode/settings.json
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
