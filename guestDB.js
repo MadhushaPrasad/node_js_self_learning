@@ -32,10 +32,24 @@ const deleteGuest = (guest_ID) => {
 
 const searchGest = (guest_ID) => {
     console.log(chalk.magenta("Get Seach Guest", guest_ID));
+
+    const allGeust = loadGuest();
+    const guest = allGeust.find((guest) => {
+        return guest.guest_ID == guest_ID;
+    });
+    if (guest) {
+        console.log("Search Guest is : \n", guest);
+    } else {
+        console.log(chalk.red("There is no any guest"));
+    }
 };
 
 const getAllGest = () => {
     console.log(chalk.magenta("Get All Guest"));
+    const allGeust = loadGuest();
+    allGeust.forEach((guest) => {
+        console.log(guest);
+    });
 };
 
 //save data to json file
