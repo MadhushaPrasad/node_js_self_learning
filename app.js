@@ -6,15 +6,28 @@ yargs.version("1.2.0");
 yargs.command({
     command: 'add',
     describe: "Add a guest",
-    handle: function () {
+    builder: {
+        name: {
+            describe: "Name",
+            demandOption: true,
+            type: "String"
+        },
+        address: {
+            describe: "Address",
+            type: "String"
+        }
+    },
+    handler: function () {
         db.addGuest();
+        console.log("Name is =", yargs.argv.name);
+        console.log("Address is =", yargs.argv.address);
     }
 });
 
 yargs.command({
     command: 'update',
     describe: "update a guest",
-    handle: function () {
+    handler: function () {
         db.updateGuest();
     }
 });
