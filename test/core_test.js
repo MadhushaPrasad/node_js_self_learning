@@ -1,4 +1,5 @@
-// const fs = require('fs');
+const fs = require('fs');
+// const os = require('os');
 
 // fs.writeFileSync('data.txt', 'Hello JavaScript'); //file create and write
 // fs.appendFileSync('data.txt', ' Node js');//file create and append data to created file
@@ -7,7 +8,18 @@
 // console.log(data); //data read as buffer
 // console.log(data.toString()); //data read as string
 
-const os = require('os');
+// console.log(os.freemem()); //check free memory
+// console.log(os.totalmem()); //check total memory
 
-console.log(os.freemem()); //check free memory
-console.log(os.totalmem()); //check total memory
+
+//save data to json file
+
+const guest = [];
+
+guest.push({
+    name: "Name",
+    address: "add01"
+});
+
+console.log(guest);
+// fs.writeFileSync("guest_data.json",guest);
