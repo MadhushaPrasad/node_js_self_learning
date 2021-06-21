@@ -38,9 +38,14 @@ const saveGuest = (guest) => {
 };
 
 const loadGuest = () => {
-    const dataBuffer = fs.readFileSync(data_file);
-    const dataJson = dataBuffer.toString();
-    return JSON.parse(dataJson);
+    try {
+        const dataBuffer = fs.readFileSync(data_file);
+        const dataJson = dataBuffer.toString();
+        return JSON.parse(dataJson);
+    } catch (e) {
+        return [];
+    }
+
 };
 
 module.exports = {
