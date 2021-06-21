@@ -22,6 +22,26 @@ const addGuest = (dataObject) => {
 };
 
 const updateGuest = (dataObject) => {
+    const guest = loadGuest();
+
+    const guestIndex = guest.findIndex((guest) => {
+        return guest.guest_ID === dataObject.id;
+    });
+
+    if (guestIndex != -1) {
+        const guests = guest[guestIndex];
+        if (dataObject.id) {
+            console.log(dataObject.id);
+            console.log("Guest Updated");
+            saveGuest(guests);
+        } else {
+            console.log("No Like that guest");
+        }
+    }
+
+
+    console.log(guestIndex);
+
     console.log(chalk.blue("Update Guest", dataObject.id, dataObject.name, dataObject.address));
 };
 
@@ -33,6 +53,7 @@ const deleteGuest = (guest_ID) => {
     const guest = allGeust.filter((allGeust) => {
         return allGeust.guest_ID != guest_ID;
     });
+
     if (allGeust.length > guest.length) {
         saveGuest(guest);//save other guests again after remove correct guest
         console.log(guest);
