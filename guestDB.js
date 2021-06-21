@@ -5,7 +5,7 @@ const data_file = "data.json";//global variable
 
 //add new guest to json file
 const addGuest = (dataObject) => {
-    const guest = [];
+    const guest = loadGuest();
     guest.push({
         guest_name: dataObject.name,
         guest_address: dataObject.address,
@@ -35,6 +35,12 @@ const getAllGest = () => {
 const saveGuest = (guest) => {
     const dataJson = JSON.stringify(guest);//stringify object to string
     fs.writeFileSync(data_file, dataJson);//write data to dataJson file
+};
+
+const loadGuest = () => {
+    const dataBuffer = fs.readFileSync(data_file);
+    const dataJson = dataBuffer.toString();
+    return JSON.parse(dataJson);
 };
 
 module.exports = {
