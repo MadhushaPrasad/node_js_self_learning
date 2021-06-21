@@ -1,9 +1,6 @@
+const yargs = require("yargs");
 const db = require('./guestDB');
 
-const command = process.argv;
+console.log(process.argv);
+console.log(yargs.argv);
 
-if (command[2] === "add") {
-    db.addGuest();
-} else if (command[2] === "update") {
-    db.updateGuest();
-}

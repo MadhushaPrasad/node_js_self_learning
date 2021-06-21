@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/MadhushaPrasad/node_js_self_learning#readme",
   "dependencies": {
-    "chalk": "^4.1.1"
+    "chalk": "^4.1.1",
+    "yargs": "^17.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
