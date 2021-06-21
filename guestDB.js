@@ -28,6 +28,19 @@ const updateGuest = (dataObject) => {
 
 const deleteGuest = (guest_ID) => {
     console.log(chalk.red("Delete Guest", guest_ID));
+
+    const allGeust = loadGuest();
+    const guest = allGeust.filter((allGeust) => {
+        return allGeust.guest_ID != guest_ID;
+    });
+    if (allGeust.length > guest.length) {
+        saveGuest(guest);//save other guests again after remove correct guest
+        console.log(guest);
+        console.log(chalk.red("Guest Deleted"));
+    } else {
+        console.log(chalk.red("There is no any guest"));
+    }
+
 };
 
 const searchGest = (guest_ID) => {
