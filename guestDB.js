@@ -3,8 +3,15 @@ const fs = require('fs');
 
 const data_file = "data.json";//global variable
 
+//add new guest to json file
 const addGuest = (dataObject) => {
-    console.log(chalk.green("Add Guest ", dataObject.name, dataObject.address));
+    const guest = [];
+    guest.push({
+        guest_name: dataObject.name,
+        guest_address: dataObject.address,
+    });
+    saveGuest(guest);
+    console.log(chalk.green("Add New Guest"));
 };
 
 const updateGuest = (dataObject) => {
@@ -27,7 +34,7 @@ const getAllGest = () => {
 //save data to json file
 const saveGuest = (guest) => {
     const dataJson = JSON.stringify(guest);//stringify object to string
-    fs.writeFileSync(dataJson, dataJson);//write data to dataJson file
+    fs.writeFileSync(data_file, dataJson);//write data to dataJson file
 };
 
 module.exports = {
