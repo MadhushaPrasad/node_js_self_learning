@@ -26,6 +26,11 @@ const dataJson = JSON.stringify(guest);
 fs.writeFileSync("guest_data.json", dataJson);*/
 
 
+/*
 //read data from json file
 const readFile = fs.readFileSync("guest_data.json");
-console.log(readFile.toString());//as string data
+const dataReadFile = readFile.toString();//parse to string
+console.log(dataReadFile[0]);
+const data = JSON.parse(readFile);//parse to json file
+console.log(data[0].name);//as string data
+*/
