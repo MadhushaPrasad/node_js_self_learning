@@ -21,5 +21,6 @@ guest.push({
     address: "add01"
 });
 
-console.log(guest);
-// fs.writeFileSync("guest_data.json",guest);
+const dataJson = JSON.stringify(guest);
+
+fs.writeFileSync("guest_data.json", dataJson);
