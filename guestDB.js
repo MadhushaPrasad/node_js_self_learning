@@ -1,20 +1,20 @@
 const chalk = require('chalk');
 
-const addGuest = () => {
-    console.log(chalk.green("Add Guest"));
+const addGuest = (dataObject) => {
+    console.log(chalk.green("Add Guest ", dataObject.name, dataObject.address));
 };
 
-const updateGuest = () => {
-    console.log(chalk.blue("Update Guest"));
+const updateGuest = (dataObject) => {
+    console.log(chalk.blue("Update Guest", dataObject.id, dataObject.name, dataObject.address));
 };
 
 
-const deleteGuest = () => {
-    console.log(chalk.red("Delete Guest"));
+const deleteGuest = (guest_ID) => {
+    console.log(chalk.red("Delete Guest", guest_ID));
 };
 
-const searchGest = () => {
-    console.log(chalk.magenta("Get Seach Guest"));
+const searchGest = (guest_ID) => {
+    console.log(chalk.magenta("Get Seach Guest", guest_ID));
 };
 
 const getAllGest = () => {
